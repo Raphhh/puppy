@@ -23,7 +23,7 @@ class Route
     private $controller;
 
     /**
-     * @var array
+     * @var string[]
      */
     private $matches = array();
 
@@ -52,7 +52,7 @@ class Route
     }
 
     /**
-     * @param array $matches
+     * @param string[] $matches
      */
     public function setMatches(array $matches)
     {
@@ -60,7 +60,7 @@ class Route
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getMatches()
     {
