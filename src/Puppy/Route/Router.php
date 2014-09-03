@@ -39,7 +39,7 @@ class Router
      */
     public function addRoute(Route $route)
     {
-        $this->routes[] = $route;
+        $this->routes[$route->getPattern()] = $route;
     }
 
     /**

@@ -38,7 +38,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase
 
         $routeFinder->expects($this->once())
             ->method('find')
-            ->with($uri, array($route));
+            ->with($uri, array($route->getPattern() => $route));
 
         return $routeFinder;
     }
