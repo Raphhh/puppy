@@ -2,6 +2,7 @@
     "name": "raphhh/puppy",
     "description": "A tiny, brave and faithful MVC framework",
     "version": "0.0.0",
+    "minimum-stability": "dev",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,10 +21,6 @@
     "require": {
         "php": ">=5.4",
         "pimple/pimple": "@stable",
-        "raphhh/trex": "dev-master",
-        "symfony/http-foundation": "@stable"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "@stable"
+        "raphhh/puppy-front-controller": "dev-master"
     }
 }
