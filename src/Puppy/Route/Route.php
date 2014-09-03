@@ -110,13 +110,13 @@ class Route
             'matches' => $this->getMatches(),
             'services' => $services,
         );
-        foreach ($services->keys() as $key) {
-            foreach ($callbackReflection->getReflector()->getParameters() as $reflectionParameter) {
-                if ($reflectionParameter->getName() === $key) {
-                    $args[$key] = $services[$key];
-                }
+
+        foreach ($callbackReflection->getReflector()->getParameters() as $reflectionParameter) {
+            if ($services->offsetExists($reflectionParameter->getName())) {
+                $args[$reflectionParameter->getName()] = $services[$reflectionParameter->getName()];
             }
         }
+
         return $args;
     }
 
