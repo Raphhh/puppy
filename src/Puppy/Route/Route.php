@@ -1,7 +1,7 @@
 <?php
 namespace Puppy\Route;
 
-use Pimple\Container;
+use ArrayAccess;
 use TRex\Reflection\CallableReflection;
 
 /**
@@ -42,10 +42,10 @@ class Route
     /**
      * Calls the controller and give it $matches and $services.
      *
-     * @param Container $services
+     * @param ArrayAccess $services
      * @return mixed
      */
-    public function call(Container $services)
+    public function call(ArrayAccess $services)
     {
         $callbackReflection = new CallableReflection($this->getController());
         return $callbackReflection->invokeA($this->prepareArgs($services, $callbackReflection));
@@ -100,11 +100,11 @@ class Route
     }
 
     /**
-     * @param Container $services
+     * @param ArrayAccess $services
      * @param CallableReflection $callbackReflection
      * @return array
      */
-    private function prepareArgs(Container $services, CallableReflection $callbackReflection)
+    private function prepareArgs(ArrayAccess $services, CallableReflection $callbackReflection)
     {
         $args = array(
             'matches' => $this->getMatches(),

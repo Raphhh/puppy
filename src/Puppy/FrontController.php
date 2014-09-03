@@ -1,12 +1,12 @@
 <?php
 namespace Puppy;
 
+use ArrayAccess;
 use Pimple\Container;
 use Puppy\Route\Route;
 use Puppy\Route\RouteFinder;
 use Puppy\Route\Router;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class FrontController
@@ -19,7 +19,7 @@ class FrontController
 {
 
     /**
-     * @var Container
+     * @var ArrayAccess
      */
     private $services;
 
@@ -27,10 +27,11 @@ class FrontController
      * Constructor.
      *
      * @param Request $request
-     * @param Container $services
+     * @param ArrayAccess $services
      */
-    public function __construct(Request $request, Container $services = null ) {
-        $this->setContainer($services ? : new Container());
+    public function __construct(Request $request, ArrayAccess $services = null)
+    {
+        $this->setServices($services ? : new Container());
 
         $this->addService(
             'request',
@@ -55,7 +56,7 @@ class FrontController
      */
     public function addService($name, callable $callback)
     {
-        $this->getContainer()->offsetSet($name, $callback);
+        $this->getServices()->offsetSet($name, $callback);
     }
 
     /**
@@ -81,7 +82,7 @@ class FrontController
     {
         return $this->getService('router')
             ->find($this->getService('request')->getRequestUri())
-            ->call($this->getContainer());
+            ->call($this->getServices());
     }
 
     /**
@@ -90,21 +91,21 @@ class FrontController
      */
     private function getService($name)
     {
-        return $this->getContainer()->offsetGet($name);
+        return $this->getServices()->offsetGet($name);
     }
 
     /**
-     * @param Container $services
+     * @param ArrayAccess $services
      */
-    private function setContainer(Container $services)
+    private function setServices(ArrayAccess $services)
     {
         $this->services = $services;
     }
 
     /**
-     * @return Container
+     * @return ArrayAccess
      */
-    private function getContainer()
+    private function getServices()
     {
         return $this->services;
     }
