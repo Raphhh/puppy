@@ -20,7 +20,8 @@
     "require": {
         "php": ">=5.4",
         "pimple/pimple": "@stable",
-        "raphhh/trex": "dev-master"
+        "raphhh/trex": "dev-master",
+        "symfony/http-foundation": "@stable"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"
