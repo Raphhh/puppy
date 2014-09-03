@@ -19,7 +19,8 @@
     },
     "require": {
         "php": ">=5.4",
-        "pimple/pimple": "@stable"
+        "pimple/pimple": "@stable",
+        "raphhh/trex": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"

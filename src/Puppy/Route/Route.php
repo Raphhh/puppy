@@ -2,6 +2,7 @@
 namespace Puppy\Route;
 
 use Pimple\Container;
+use TRex\Reflection\CallableReflection;
 
 /**
  * Class Route
@@ -46,10 +47,11 @@ class Route
      */
     public function call(Container $services)
     {
-        return call_user_func_array(
-            $this->getController(),
-            array($this->getMatches(), $services)
-        );
+        $callbackReflection = new CallableReflection($this->getController());
+        return $callbackReflection->invokeA(array(
+                'args' => $this->getMatches(),
+                'services' => $services,
+            ));
     }
 
     /**
