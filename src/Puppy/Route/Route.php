@@ -48,10 +48,7 @@ class Route
     public function call(Container $services)
     {
         $callbackReflection = new CallableReflection($this->getController());
-        return $callbackReflection->invokeA(array(
-                'args' => $this->getMatches(),
-                'services' => $services,
-            ));
+        return $callbackReflection->invokeA($this->prepareArgs($services, $callbackReflection));
     }
 
     /**
@@ -100,6 +97,27 @@ class Route
     private function setPattern($pattern)
     {
         $this->pattern = (string)$pattern;
+    }
+
+    /**
+     * @param Container $services
+     * @param CallableReflection $callbackReflection
+     * @return array
+     */
+    private function prepareArgs(Container $services, CallableReflection $callbackReflection)
+    {
+        $args = array(
+            'args' => $this->getMatches(),
+            'services' => $services,
+        );
+        foreach ($services->keys() as $key) {
+            foreach ($callbackReflection->getReflector()->getParameters() as $reflectionParameter) {
+                if ($reflectionParameter->getName() === $key) {
+                    $args[$key] = $services[$key];
+                }
+            }
+        }
+        return $args;
     }
 
 
