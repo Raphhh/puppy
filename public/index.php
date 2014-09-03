@@ -1,12 +1,11 @@
 <?php
-use Pimple\Container;
 use Puppy\FrontController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 require_once '../vendor/autoload.php';
 
-$frontController = new FrontController(Request::createFromGlobals(), new Container());
+$frontController = new FrontController(Request::createFromGlobals());
 
 
 //example /hello/<yourName>
