@@ -1,0 +1,26 @@
+{
+    "name": "raphhh/puppy",
+    "description": "A tiny, brave and faithful MVC framework",
+    "version": "0.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raphaël Lefebvre",
+            "email": "raphael@raphaellefebvre.be"
+        }
+    ],
+    "keywords": ["MVC", "framework"],
+    "homepage": "https://github.com/Raphhh/puppy",
+    "autoload": {
+        "psr-0": {
+            "Puppy": ["src/", "tests/"]
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    }
+}
