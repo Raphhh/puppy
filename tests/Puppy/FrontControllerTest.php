@@ -2,6 +2,7 @@
 namespace Puppy;
 
 use Pimple\Container;
+use Puppy\Http\ResponseAdapter;
 use Puppy\Route\Route;
 use Puppy\Route\Router;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,20 +18,28 @@ class FrontControllerTest extends \PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function testAddService(){
+    public function testAddService()
+    {
         $request = new Request();
         $services = new Container();
 
         $frontController = new FrontController($request, $services);
-        $frontController->addService('service1', function(){ return 'value1'; });
+        $frontController->addService(
+            'service1',
+            function () {
+                return 'value1';
+            }
+        );
         $this->assertSame('value1', $services['service1']);
     }
 
     /**
      *
      */
-    public function testAddController(){
-        $controller = function(){ };
+    public function testAddController()
+    {
+        $controller = function () {
+        };
         $request = new Request();
         $services = new Container();
 
@@ -43,7 +52,8 @@ class FrontControllerTest extends \PHPUnit_Framework_TestCase
      * @param Router $router
      * @param callable $controller
      */
-    private function assertRouter(Router $router, callable $controller){
+    private function assertRouter(Router $router, callable $controller)
+    {
         $routes = $router->getRoutes();
         $this->assertArrayHasKey('pattern', $routes);
         $this->assertSame($controller, $routes['pattern']->getController());
@@ -52,14 +62,20 @@ class FrontControllerTest extends \PHPUnit_Framework_TestCase
     /**
      *
      */
-    public function testAddCall(){
+    public function testAddCall()
+    {
         $request = new Request();
         $services = new Container();
         $router = $this->getRouter($request, $services);
 
         $frontController = new FrontController($request, $services);
-        $frontController->addService('router', function() use($router){ return $router; });
-        $this->assertSame('route_call_result', $frontController->call());
+        $frontController->addService(
+            'router',
+            function () use ($router) {
+                return $router;
+            }
+        );
+        $this->assertEquals(new ResponseAdapter('route_call_result'), $frontController->call());
     }
 
     /**

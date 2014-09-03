@@ -3,6 +3,8 @@ namespace Puppy;
 
 use ArrayAccess;
 use Pimple\Container;
+use Puppy\Http\IResponse;
+use Puppy\Http\ResponseAdapter;
 use Puppy\Route\Route;
 use Puppy\Route\RouteFinder;
 use Puppy\Route\Router;
@@ -76,13 +78,15 @@ class FrontController
     /**
      * Calls the controller matched with the request uri.
      *
-     * @return mixed
+     * @return IResponse
      */
     public function call()
     {
-        return $this->getService('router')
-            ->find($this->getService('request')->getRequestUri())
-            ->call($this->getServices());
+        return new ResponseAdapter(
+            $this->getService('router')
+                ->find($this->getService('request')->getRequestUri())
+                ->call($this->getServices())
+        );
     }
 
     /**

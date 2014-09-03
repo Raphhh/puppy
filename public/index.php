@@ -9,15 +9,23 @@ $frontController = new FrontController(Request::createFromGlobals());
 
 
 //example /hello/<yourName>
-$frontController->addController('#/hello/(.*?)$#', function(array $matches){
-        return '<h1>Hello '.htmlentities($matches[1]).'!</h1>';
-    });
+$frontController->addController(
+    '#/hello/(.*?)$#',
+    function (array $matches) {
+        return '<h1>Hello ' . htmlentities($matches[1]) . '!</h1>';
+    }
+);
 
 //default controller
-$frontController->addController('#(.*?)#', function(Request $request){
-        return new Response('<h1>Hello world!</h1> <p>You ask for the uri "'.htmlentities($request->getRequestUri()).'"</p>');
-    });
+$frontController->addController(
+    '#(.*?)#',
+    function (Request $request) {
+        return new Response('<h1>Hello world!</h1> <p>You ask for the uri "' . htmlentities(
+            $request->getRequestUri()
+        ) . '"</p>');
+    }
+);
 
 
 //execute
-echo $frontController->call();
+$frontController->call()->send();
