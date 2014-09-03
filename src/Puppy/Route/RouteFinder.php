@@ -43,7 +43,7 @@ class RouteFinder
     private function match($uri, $pattern)
     {
         $matches = array();
-        preg_match($pattern, $uri, $matches);
+        @preg_match($pattern, $uri, $matches); //todo catch the warning to an exception
         return $matches;
     }
 }
