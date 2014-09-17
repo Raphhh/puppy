@@ -18,6 +18,20 @@ A tiny, brave and faithful MVC‏ framework
 $ composer create-project raphhh/puppy path/to/my/project
 ```
 
+## Add services
+
+Edit the file public/index.php and add services with the method FrontController::addServices(string $name, Container $service).
+
+### What is a service?
+
+A service is a class which will be present in all your controllers.
+
+by default, Puppy add two services:
+ * request
+ * router
+
+You can add any service you want, like for example a templating library.
+
 ## Add controllers
 
 Edit the file public/index.php and add controllers with the method FrontController::addController(string $pattern, callable $controller).
@@ -54,21 +68,7 @@ $frontController->addController('#(.*?)#', function(){
     });
 ```
 
-## Add services
-
-Edit the file public/index.php and add services with the method FrontController::addServices(string $name, Container $service).
-
-### What is a service?
-
-A service is a class which will be present in all your controllers.
-
-by default, Puppy add two services:
- * request
- * router
-
-You can add any service you want, like for example a templating library.
-
-## What arguments will receive the controller?
+### What arguments will receive the controller?
 
 The controller receive two kind of argument, depending what you want.
 
@@ -107,4 +107,30 @@ You can also specify which service you want. you just have to name it in the par
 $frontController->addController('#(.*?)#', function(Request $request){
         return '<h1>Hello world!</h1> <p>You ask for the uri "'.htmlentities($request->getRequestUri()).'"</p>';
     });
+```
+
+
+### Add modules
+
+If you want to build independent packages, you can add a module to the main FrontController.
+
+
+#### What is a module?
+A module is a class that wraps a specific list of services an controllers. The module receives the FrontController in argument. So, your module class can add to the FrontController any services or controllers that are in your package.
+
+
+```php
+//your module class
+class MyModule implements \Puppy\IModule{
+
+    function init(\Puppy\FrontController $frontController){
+        $frontController->addController('#my-module(.*?)#', function(){
+            return 'This is my module';
+        });
+    }
+
+}
+
+//add the module to the FrontController
+$frontController->addModule(new MyModule());
 ```
