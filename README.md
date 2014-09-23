@@ -26,11 +26,11 @@ Edit the file public/index.php and add services with the method FrontController:
 
 A service is a class which will be present in all your controllers.
 
-by default, Puppy add two services:
+By default, Puppy adds two services:
  * request
  * router
 
-You can add any service you want, like for example a templating library.
+You can add any service you want, like for example a templating library, an ORM, ...
 
 ## Add controllers
 
