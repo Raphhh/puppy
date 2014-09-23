@@ -27,8 +27,8 @@ Edit the file public/index.php and add services with the method FrontController:
 A service is a class which will be present in all your controllers.
 
 By default, Puppy adds two services:
- * request
- * router
+ * request (an object with all the context of the client request and the session)
+ * router (an object which can analyse all the defined routes and controllers of your app)
 
 You can add any service you want, like for example a templating library, an ORM, ...
 
@@ -59,6 +59,8 @@ $frontController->addController('#(.*?)#', array($controller, 'method'));
 A pattern of a controller is a regex which will match with a specific request uri.
 
 Only one of your controllers will be called when its pattern will match with the request uri. So, depending of the uri, the code of your controller will be executed.
+
+### What must a controller return?
 
 Your controller will return the response to send to the client. This can be a simple string. But more powerful, this can be also a Response, which will manage also the http header.
 
@@ -101,7 +103,7 @@ $frontController->addController('#hello/(.*?)#', function(array $matches, Contai
 ```
 The order of params has no importance!
 
-You can also specify which service you want. you just have to name it in the params.
+You can also specify which service you want. You just have to name it in the params. (The name of the param must be the exactly the name of your service.)
 
 ```php
 $frontController->addController('#(.*?)#', function(Request $request){
