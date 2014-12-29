@@ -1,7 +1,6 @@
 {
     "name": "raphhh/puppy",
     "description": "A tiny, brave and faithful MVC framework",
-    "version": "0.0.0",
     "minimum-stability": "dev",
     "type": "library",
     "license": "MIT",
@@ -21,6 +20,6 @@
     "require": {
         "php": ">=5.4",
         "pimple/pimple": "@stable",
-        "raphhh/puppy-front-controller": "dev-master"
+        "raphhh/puppy-front-controller": "~1.0"
     }
 }
