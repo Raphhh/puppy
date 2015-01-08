@@ -10,7 +10,7 @@
 [![Reference Status](https://www.versioneye.com/php/raphhh:puppy/reference_badge.svg?style=flat)](https://www.versioneye.com/php/raphhh:puppy/references)
 [![License](https://poser.pugx.org/raphhh/puppy/license.svg)](https://packagist.org/packages/raphhh/puppy)
 
-A tiny, brave and faithful MVC‏ framework
+A tiny, brave and faithful PHP micro framework
 
 ## Installation
 
