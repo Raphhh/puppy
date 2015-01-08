@@ -1,6 +1,6 @@
 {
     "name": "raphhh/puppy",
-    "description": "A tiny, brave and faithful MVC framework",
+    "description": "A tiny, brave and faithful PHP micro framework",
     "minimum-stability": "dev",
     "type": "library",
     "license": "MIT",
