@@ -19,7 +19,7 @@
     },
     "require": {
         "php": ">=5.4",
-        "pimple/pimple": "@stable",
+        "pimple/pimple": "~3.0",
         "raphhh/puppy-front-controller": "~1.0"
     }
 }
