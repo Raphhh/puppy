@@ -1,0 +1,416 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "7d6f809daa3b702d6f3c009123197dd4",
+    "packages": [
+        {
+            "name": "pimple/pimple",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "718d503a0047ccaa724d6ee4804a6de8b774fdad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/718d503a0047ccaa724d6ee4804a6de8b774fdad",
+                "reference": "718d503a0047ccaa724d6ee4804a6de8b774fdad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
+            "homepage": "http://pimple.sensiolabs.org",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "time": "2015-01-16 14:35:03"
+        },
+        {
+            "name": "raphhh/puppy-application",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/puppy-application.git",
+                "reference": "3ebdd19c627cb23639acdc6ffee55dd13b67c4e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/3ebdd19c627cb23639acdc6ffee55dd13b67c4e9",
+                "reference": "3ebdd19c627cb23639acdc6ffee55dd13b67c4e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "pimple/pimple": ">=v3.0",
+                "raphhh/trex-parser": "~1.0",
+                "raphhh/trex-reflection": "~0.1",
+                "symfony/http-foundation": "~2.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puppy\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "HTTP package for Puppy framework",
+            "homepage": "https://github.com/Raphhh/puppy",
+            "keywords": [
+                "framework",
+                "mvc"
+            ],
+            "time": "2015-01-25 20:43:52"
+        },
+        {
+            "name": "raphhh/puppy-config",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/puppy-config.git",
+                "reference": "98ffa9d66b0350c97e9274bfbbf2b023cc05d0a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/98ffa9d66b0350c97e9274bfbbf2b023cc05d0a3",
+                "reference": "98ffa9d66b0350c97e9274bfbbf2b023cc05d0a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puppy\\Config\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "A bootstrap for a PHP lib, including basic common files and settings",
+            "homepage": "https://github.com/Raphhh/puppy-config",
+            "keywords": [
+                "bootstrap"
+            ],
+            "time": "2015-01-24 23:23:54"
+        },
+        {
+            "name": "raphhh/puppy-service",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/puppy-service.git",
+                "reference": "22fd5bb80bdbbacda1131788107f2912fce5db3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/22fd5bb80bdbbacda1131788107f2912fce5db3b",
+                "reference": "22fd5bb80bdbbacda1131788107f2912fce5db3b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "raphhh/puppy-config": "~1.1",
+                "twig/twig": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puppy\\Service\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "A bootstrap for a PHP lib, including basic common files and settings",
+            "homepage": "https://github.com/Raphhh/puppy-service",
+            "keywords": [
+                "bootstrap"
+            ],
+            "time": "2015-01-25 20:20:34"
+        },
+        {
+            "name": "raphhh/trex-parser",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/trex-parser.git",
+                "reference": "489334af897df107c824c5b4b10ef36ec68be310"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/trex-parser/zipball/489334af897df107c824c5b4b10ef36ec68be310",
+                "reference": "489334af897df107c824c5b4b10ef36ec68be310",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TRex\\Parser\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "A bootstrap for a PHP lib, including basic common files and settings",
+            "homepage": "https://github.com/Raphhh/trex-parser",
+            "keywords": [
+                "bootstrap"
+            ],
+            "time": "2015-01-24 22:00:35"
+        },
+        {
+            "name": "raphhh/trex-reflection",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/trex-reflection.git",
+                "reference": "0446eefe10bab909061de2edb2a9cd1fe7543463"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/trex-reflection/zipball/0446eefe10bab909061de2edb2a9cd1fe7543463",
+                "reference": "0446eefe10bab909061de2edb2a9cd1fe7543463",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TRex\\Reflection\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "Reflection helpers",
+            "homepage": "https://github.com/Raphhh/trex-reflection",
+            "keywords": [
+                "reflection"
+            ],
+            "time": "2015-01-20 21:37:28"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "2.7.x-dev",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation.git",
+                "reference": "ee7cee860e05ba4e12c9a8a1775d4e5ae3f790cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ee7cee860e05ba4e12c9a8a1775d4e5ae3f790cb",
+                "reference": "ee7cee860e05ba4e12c9a8a1775d4e5ae3f790cb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4|~3.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/HttpFoundation/Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-25 04:39:35"
+        },
+        {
+            "name": "twig/twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "6b434f4521e74bb5022e7e9e441189356fea137b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/6b434f4521e74bb5022e7e9e441189356fea137b",
+                "reference": "6b434f4521e74bb5022e7e9e441189356fea137b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-01-25 17:35:14"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "raphhh/puppy-application": 20,
+        "raphhh/puppy-service": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}
