@@ -1,5 +1,7 @@
 # See http://git-scm.com/docs/gitignore
 
+### Puppy ###
+vars/
 
 ### Composer ###
 composer.phar
