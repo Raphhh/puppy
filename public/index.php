@@ -1,31 +1,20 @@
 <?php
-use Puppy\FrontController;
+use Puppy\Application;
+use Puppy\Config\Config;
+use Puppy\Module\ModuleFactory;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 require_once '../vendor/autoload.php';
 
-$frontController = new FrontController(Request::createFromGlobals());
+/**
+ * Puppy runs for you with happiness!
+ *
+ * @author Raphaël Lefebvre <raphael@raphaellefebvre.be>
+ * @doc https://github.com/Raphhh/puppy
+ */
 
+chdir(dirname(__DIR__));
 
-//example /hello/<yourName>
-$frontController->addController(
-    '#/hello/(.*?)$#',
-    function (array $matches) {
-        return '<h1>Hello ' . htmlentities($matches[1]) . '!</h1>';
-    }
-);
-
-//default controller
-$frontController->addController(
-    '#(.*?)#',
-    function (Request $request) {
-        return new Response('<h1>Hello world!</h1> <p>You ask for the uri "' . htmlentities(
-            $request->getRequestUri()
-        ) . '"</p>');
-    }
-);
-
-
-//execute
-$frontController->call()->send();
+$puppy = new Application(new Config(getenv('APPLICATION_ENV')), Request::createFromGlobals());
+$puppy->initModules((new ModuleFactory())->createFromApplication($puppy));
+$puppy->run(); //good dog! :)
