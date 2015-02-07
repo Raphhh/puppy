@@ -1,4 +1,4 @@
-# Puppy
+# Puppy - a brave and faithful micro-framework
 
 [![Latest Stable Version](https://poser.pugx.org/raphhh/puppy/v/stable.svg)](https://packagist.org/packages/raphhh/puppy)
 [![Build Status](https://travis-ci.org/Raphhh/puppy.png)](https://travis-ci.org/Raphhh/puppy)
@@ -10,7 +10,8 @@
 [![Reference Status](https://www.versioneye.com/php/raphhh:puppy/reference_badge.svg?style=flat)](https://www.versioneye.com/php/raphhh:puppy/references)
 [![License](https://poser.pugx.org/raphhh/puppy/license.svg)](https://packagist.org/packages/raphhh/puppy)
 
-A tiny, brave and faithful PHP micro framework
+Puppy is micro-framework build in PHP. 
+It runs for you with happiness and creates static websites using [Twig templates](http://twig.sensiolabs.org/)!
 
 ## Installation
 
@@ -18,121 +19,56 @@ A tiny, brave and faithful PHP micro framework
 $ composer create-project raphhh/puppy path/to/my/project
 ```
 
-## Add services
+## Static website with Twig
 
-Edit the file public/index.php and add services with the method FrontController::addServices(string $name, Container $service).
+Puppy is a brave friend of your static site. It will give you more power with the help of Twig. 
+So, you will be able to build your website directly in Twig, without any problems of routes or configuration.
 
-### What is a service?
+### Link a page to a template
 
-A service is a class which will be present in all your controllers.
+Consider directory '/templates/public' like a mirror of your public site access, but specially dedicated to twig templates. 
+For each page you want in your website, you have to put a twig file in this directory. 
+Name this file as it was a html file, but complete it with extension '.twig'.
 
-By default, Puppy adds two services:
- * request (an object with all the context of the client request and the session)
- * router (an object which can analyse all the defined routes and controllers of your app)
+For example, for a home page, normally you will use a 'index.html' at the root of your public area. 
+Here, with Puppy, you have to create a file '/templates/public/index.html.twig'. Same name, but with specific extension.
+Then, open the base url of your website (e.i. www.mysite.com), and you will go to this template.
+You can also call the equivalent html file in your address: www.mysite.com/index.html. :)
 
-You can add any service you want, like for example a templating library, an ORM, ...
+Now, imagine you want to add a second page, like a contact page for example. 
+So, you want to display a new template for the url 'www.mysite.com/contact.html'.
+You just have to create this new template in the file '/templates/public/contact.html.twig'.
+ 
+### Create common private template
 
-## Add controllers
+Once you have create your second template file, there is some duplicated code in your html. No problem, here comes Twig! 
+You can, for example, group your common base html in a separate file that each page will extend.
+As this file must not be directly accessible from a url, it must not appear in the '/templates/public' dir. 
+You have to put it directly at the root of the '/templates' dir. So, it will never be called from any url.
 
-Edit the file public/index.php and add controllers with the method FrontController::addController(string $pattern, callable $controller).
+### Add some specific behaviour
 
-### What is a controller?
+Now, imagine you have a form in your contact page, sending a email.
+You can easily add a function to handle your form in php.
+See the DemoModule to know how to proceed.
 
-A controller is any callable.
+## Config
 
-For example, callable can be a closure:
+Add all your config you want, depending on each environment.
+Puppy uses an easy config provider. 
+For more information, see [puppy-config](https://github.com/Raphhh/puppy-config) documentation.
 
-```php
-$frontController->addController('#(.*?)#', function(){
-        return '<h1>Hello world!</h1>';
-    });
-```
+## Routes
 
-or can be a class method:
+Add any special routes you want for particular behaviour.
+Puppy uses a complete route provider. 
+For more information, see [puppy-application](https://github.com/Raphhh/puppy-application) documentation.
 
-```php
-$frontController->addController('#(.*?)#', array($controller, 'method'));
-```
+## Services
 
-### What is a controller pattern?
+Add all your services you need.
+Puppy uses a simple service container.
+For more information, see [puppy-application](https://github.com/Raphhh/puppy-application) documentation.
 
-A pattern of a controller is a regex which will match with a specific request uri.
-
-Only one of your controllers will be called when its pattern will match with the request uri. So, depending of the uri, the code of your controller will be executed.
-
-### What must a controller return?
-
-Your controller will return the response to send to the client. This can be a simple string. But more powerful, this can be also a Response, which will manage also the http header.
-
-```php
-$frontController->addController('#(.*?)#', function(){
-         return new Response('<h1>Hello world!</h1>');
-    });
-```
-
-### What arguments will receive the controller?
-
-The controller receive two kind of argument, depending what you want.
-
-#### The matches patterns
-
-If you want to receive the list of matches between pattern and uri, you must specify the param "array $matches".
-
-```php
-$frontController->addController('#hello/(.*?)#', function(array $matches){
-        return $matches[1]; //will return the value "world" for the uri "/hello/world"
-    });
-```
-
-#### The Services
-
-If you want to have the services container, you must specify the param "Container $services".
-
-```php
-$frontController->addController('#hello/(.*?)#', function(Container $services){
-        ...
-    });
-```
-
-Of course, you can have the services with the matches.
-
-```php
-$frontController->addController('#hello/(.*?)#', function(array $matches, Container $services){
-        ...
-    });
-```
-The order of params has no importance!
-
-You can also specify which service you want. You just have to name it in the params. (The name of the param must be the exactly the name of your service.)
-
-```php
-$frontController->addController('#(.*?)#', function(Request $request){
-        return '<h1>Hello world!</h1> <p>You ask for the uri "'.htmlentities($request->getRequestUri()).'"</p>';
-    });
-```
-
-
-### Add modules
-
-If you want to build independent packages, you can add a module to the main FrontController.
-
-
-#### What is a module?
-A module is a class that wraps a specific list of services an controllers. The module receives the FrontController in argument. So, your module class can add to the FrontController any services or controllers that are in your package.
-
-
-```php
-//your module class
-class MyModule implements \Puppy\IModule{
-
-    function init(\Puppy\FrontController $frontController){
-        $frontController->addController('#my-module(.*?)#', function(){
-            return 'This is my module';
-        });
-    }
-
-}
-
-//add the module to the FrontController
-$frontController->addModule(new MyModule());
-```
+Puppy is build with pre-config services for session and template. 
+For more information, see [puppy-service](https://github.com/Raphhh/puppy-service) documentation.
