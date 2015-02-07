@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $0)
+
+php -f $BASEDIR/build.php $1
