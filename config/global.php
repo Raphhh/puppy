@@ -1,5 +1,6 @@
 <?php
 return [
+    'baseDir' => '/',
     'cache.path' => 'vars/cache',
     'template.directory.main' => 'templates',
     'template.directory.cache' => '%cache.path%/template',
