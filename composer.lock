@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-application.git",
-                "reference": "ed3706da387a13a709b69c828c4fe49afdf33bed"
+                "reference": "f43cd307b3d270c763af216b3fe2cbb908792901"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/ed3706da387a13a709b69c828c4fe49afdf33bed",
-                "reference": "ed3706da387a13a709b69c828c4fe49afdf33bed",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/f43cd307b3d270c763af216b3fe2cbb908792901",
+                "reference": "f43cd307b3d270c763af216b3fe2cbb908792901",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "framework",
                 "mvc"
             ],
-            "time": "2015-02-05 23:30:06"
+            "time": "2015-02-08 20:33:44"
         },
         {
             "name": "raphhh/puppy-config",
@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-config.git",
-                "reference": "2c45827a587b18eca18a6ca987471a1a5f39eb96"
+                "reference": "8c2af90b03ab098a63399dbef7e6bcaeae30bfa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/2c45827a587b18eca18a6ca987471a1a5f39eb96",
-                "reference": "2c45827a587b18eca18a6ca987471a1a5f39eb96",
+                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/8c2af90b03ab098a63399dbef7e6bcaeae30bfa6",
+                "reference": "8c2af90b03ab098a63399dbef7e6bcaeae30bfa6",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
             "keywords": [
                 "config"
             ],
-            "time": "2015-02-06 21:29:16"
+            "time": "2015-02-08 20:17:14"
         },
         {
             "name": "raphhh/puppy-service",
@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-service.git",
-                "reference": "8dc6034d4042a305647edbfcf7a1df142c49578f"
+                "reference": "47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/8dc6034d4042a305647edbfcf7a1df142c49578f",
-                "reference": "8dc6034d4042a305647edbfcf7a1df142c49578f",
+                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de",
+                "reference": "47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
             "keywords": [
                 "puppy"
             ],
-            "time": "2015-02-06 00:19:18"
+            "time": "2015-02-08 20:59:18"
         },
         {
             "name": "raphhh/trex-parser",
