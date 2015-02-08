@@ -14,4 +14,4 @@ vendor/
 
 
 ### PHPUnit ###
-/app/phpunit.xml
+/phpunit.xml
