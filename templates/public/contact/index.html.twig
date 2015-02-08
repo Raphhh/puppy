@@ -1,0 +1,25 @@
+{% extends 'main.html.twig' %}
+
+{% block title %}Puppy{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="jumbotron">
+
+            {% if error is defined %}
+                <p class="text-danger">{{ error }}</p>
+            {% endif %}
+            {% if services['session'].getFlashBag().has('message') %}
+                <p class="text-info">{{ services['session'].getFlashBag().get('message')[0] }}</p>
+            {% endif %}
+
+            <form action="" method="post">
+                <input type="text" placeholder="email" name="email"/>
+                <input type="submit"/>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}
