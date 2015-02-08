@@ -15,6 +15,6 @@ require_once '../vendor/autoload.php';
 
 chdir(dirname(__DIR__));
 
-$puppy = new Application(new Config(getenv('APPLICATION_ENV')), Request::createFromGlobals());
+$puppy = new Application(new Config(getenv('APP_ENV')), Request::createFromGlobals());
 $puppy->initModules((new ModuleFactory())->createFromApplication($puppy));
 $puppy->run(); //good dog! :)
