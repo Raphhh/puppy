@@ -96,9 +96,9 @@ class TemplateRouter
      */
     private function parseUrl(Request $request)
     {
-        if (!empty($this->getConfig()['staticModule.baseDir'])) {
+        if (!empty($this->getConfig()['baseDir'])) {
             $urlData = parse_url(
-                str_replace($this->getConfig()['staticModule.baseDir'], '', $request->getRequestUri())
+                str_replace($this->getConfig()['baseDir'], '', $request->getRequestUri())
             );
             return $urlData;
         }
