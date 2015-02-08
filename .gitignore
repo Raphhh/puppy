@@ -2,6 +2,7 @@
 
 ### Puppy ###
 vars/
+config/local.php
 
 ### Composer ###
 composer.phar
