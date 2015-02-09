@@ -1,10 +1,9 @@
-# Puppy - a brave and faithful micro-framework
+# Puppy framework
 
 [![Latest Stable Version](https://poser.pugx.org/raphhh/puppy/v/stable.svg)](https://packagist.org/packages/raphhh/puppy)
 [![Build Status](https://travis-ci.org/Raphhh/puppy.png)](https://travis-ci.org/Raphhh/puppy)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Raphhh/puppy/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Raphhh/puppy/)
 [![Code Coverage](https://scrutinizer-ci.com/g/Raphhh/puppy/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Raphhh/puppy/)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/_/mini.png)](https://insight.sensiolabs.com/projects/_)
 [![Dependency Status](https://www.versioneye.com/user/projects/54062eb9c4c187ff6100006f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54062eb9c4c187ff6100006f)
 [![Total Downloads](https://poser.pugx.org/raphhh/puppy/downloads.svg)](https://packagist.org/packages/raphhh/puppy)
 [![Reference Status](https://www.versioneye.com/php/raphhh:puppy/reference_badge.svg?style=flat)](https://www.versioneye.com/php/raphhh:puppy/references)
@@ -12,6 +11,11 @@
 
 Puppy is micro-framework build in PHP. 
 It runs for you with happiness and creates static websites using [Twig templates](http://twig.sensiolabs.org/)!
+
+Puppy is a brave friend of your static site, directly ready for use. It will give you more power with the help of Twig. You will be able to build your website directly in Twig, without any problems of routes or configuration. 
+
+Puppy uses a simple route system which you can easily extends to add your own behaviour and get a more interactive site. For example, you can create a form which will be handle in backend with Puppy.
+
 
 ## Installation
 
