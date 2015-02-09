@@ -43,35 +43,39 @@ return [
 
 Local config is not versioned and will never go to production. For more information about config, see specific section. 
 
-Then, you can launch Puppy in your browser. :) See the DemoModule to know more about how Puppy works.
+Then, you can launch Puppy in your browser. :) 
 
-### Link a page to a template
+### Create your own site
+
+Now you want to code your site. Just be carefull with the cache of Puppy. If Puppy is cached, your modifications will not appear in the screen. See the config section to disable the cache.
+
+### Add new pages
 
 Consider directory '/templates/public' like a mirror of your public site access, but specially dedicated to twig templates. For each page you want in your website, you have to put a twig file in this directory. Name this file as it was a html file, but complete it with extension '.twig'.
 
-For example, for a home page, normally you will use a 'index.html' at the root of your public area. Here, with Puppy, you have to create a file '/templates/public/index.html.twig'. Same name, but with specific extension. Then, open the base url of your website (e.i. 'http://www.mysite.com'), and you will go to this template. You can also call the equivalent html file in your address: 'http://www.mysite.com/index.html'. :)
+For example, for a home page, normally you will use a 'index.html' at the root of your public area. Here, with Puppy, you have to create a file '/templates/public/index.html.twig'. Same name, but with specific extension. Then, open the base url of your website, and you will go to this template. You can also call the equivalent html file in your address: /index.html'. :)
 
 So, for example, these uri will call those twig:
 
- - 'http://www.mysite.com' => 'templates/public/**index.html.twig**'
- - 'http://www.mysite.com/index.html' => 'templates/public/**index.html.twig**'
- - 'http://www.mysite.com/contact.html' => 'templates/public/**contact.html.twig**'
- - 'http://www.mysite.com/contact' => 'templates/public/**contact/index.html.twig**'
- - 'http://www.mysite.com/contact/index.html' => 'templates/public/**contact/index.html.twig**'
+ - '/' => 'templates/public/**index.html.twig**'
+ - '/index.html' => 'templates/public/**index.html.twig**'
+ - '/contact.html' => 'templates/public/**contact.html.twig**'
+ - '/contact' => 'templates/public/**contact/index.html.twig**'
+ - '/contact/index.html' => 'templates/public/**contact/index.html.twig**'
  
 ### Create common private template
 
-Now, imagine you want to add a second page, like a contact page for example. So, you want to display a new template for the url 'http://www.mysite.com/contact.html'. You just have to create this new template in the file '/templates/public/contact.html.twig'.
+Now, imagine you want to add a second page, like a contact page for example. So, you want to display a new template for the url '/contact.html'. You just have to create this new template in the file '/templates/public/contact.html.twig'.
 
-Once you have create your second template file, there is some duplicated code in your html. No problem, here comes Twig! You can, for example, group your common base html in a separate file that each page will extend.
+Once you have create your second template file, there is some duplicated code in your html (header, menu, footer, ...). No problem, here comes Twig! You can, for example, group your common base html in a separate file that each page will extend.
 
 As this file must not be directly accessible from a url, it must not appear in the '/templates/public' dir. You have to put it directly at the root of the '/templates' dir. So, it will never be called from any url.
 
-### Add some specific behaviour
+### Add some specific behaviours
 
 Now, imagine you have a form in your contact page, sending a email. You can easily add a function to handle your form in php.
 
-First, you have to add a new route when the form is post.
+First, you have to add a new route to handle the posted form.
 
 ```php
 $application->post('contact', function(){ 
