@@ -87,20 +87,18 @@ In the controller, you have to test if the form is valid for you. I the form is 
 
 ```php
 //if the form is not filled, we display the form with the error
-return $staticController->render(['error' => 'Form not filled']);
+return $staticController->render([
+    'error' => 'Form not filled'
+]);
 ```
 
 If the form is valid and you have done the job, you can redirect to avoid refresh problems.
 
 ```php
 //if the email is send, we redirect to avoid F5.
-return $this->redirect($request->getRequestUri());
-```
-
-If you want to give a message, you can flash it before redirection.
-
-```php
-$this->flash()->set('message', sprintf('Email sent from %s', $request->get('email')));
+return $staticController->redirect([
+    'message' => 'Email sent')
+]);
 ```
 
 See the DemoModule to have an example to how to proceed.
