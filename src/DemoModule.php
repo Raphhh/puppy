@@ -22,32 +22,19 @@ class DemoModule implements IModule
      */
     public function init(Application $application)
     {
-        $application->get(
-            'redirect-from',
-            function () {
-                /**
-                 * @var AppController $this
-                 */
-                $this->flash()->set('funny', 'redirection done with fun! :)');
-                return $this->redirect('redirect-to');
-            }
-        );
+        $this->exampleOfFormHandling($application);
 
-        $application->get(
-            'redirect-to',
-            function () {
-                /**
-                 * @var AppController $this
-                 */
-                return $funny = $this->flash()->get('funny', ['no redirection'])[0];
-            }
-        );
+        $this->exampleOfRedirection($application);
+    }
 
-        $application->post(
-            'contact',
-            function(Request $request, StaticController $staticController){
+    /**
+     * @param Application $application
+     */
+    private function exampleOfFormHandling(Application $application)
+    {
+        $application->post('contact', function (Request $request, StaticController $staticController) {
 
-                if(!$request->get('email')){
+                if (!$request->get('email')) {
                     //if the form is not filled, we display the form with the error
                     return $staticController->render([
                         'error' => 'Form not filled'
@@ -61,6 +48,29 @@ class DemoModule implements IModule
                     'message' => sprintf('Email sent from %s', $request->get('email'))
                 ]);
 
+            }
+        );
+    }
+
+    /**
+     * @param Application $application
+     */
+    private function exampleOfRedirection(Application $application)
+    {
+        $application->get('redirect-from', function () {
+                /**
+                 * @var AppController $this
+                 */
+                $this->flash()->set('funny', 'redirection done with fun! :)');
+                return $this->redirect('redirect-to');
+            }
+        );
+
+        $application->get('redirect-to', function () {
+                /**
+                 * @var AppController $this
+                 */
+                return $funny = $this->flash()->get('funny', ['no redirection'])[0];
             }
         );
     }
