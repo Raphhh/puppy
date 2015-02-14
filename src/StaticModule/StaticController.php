@@ -58,6 +58,20 @@ class StaticController
     }
 
     /**
+     * redirects to the same same uri.
+     *
+     * @param array $flashes
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function redirect(array $flashes = array())
+    {
+        foreach($flashes as $type => $message){
+            $this->getAppController()->flash()->add($type, $message);
+        }
+        return $this->getAppController()->redirect($this->getRequest()->getRequestUri());
+    }
+
+    /**
      * @param array $args
      * @return mixed
      */
