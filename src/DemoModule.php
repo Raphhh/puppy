@@ -46,20 +46,20 @@ class DemoModule implements IModule
         $application->post(
             'contact',
             function(Request $request, StaticController $staticController){
-                /**
-                 * @var AppController $this
-                 */
 
                 if(!$request->get('email')){
                     //if the form is not filled, we display the form with the error
-                    return $staticController->render(['error' => 'Form not filled']);
+                    return $staticController->render([
+                        'error' => 'Form not filled'
+                    ]);
                 }
 
                 //send the email...
 
                 //if the email is send, we redirect to avoid F5.
-                $this->flash()->set('message', sprintf('Email sent from %s', $request->get('email')));
-                return $this->redirect($request->getRequestUri());
+                return $staticController->redirect([
+                    'message' => sprintf('Email sent from %s', $request->get('email'))
+                ]);
 
             }
         );
