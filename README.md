@@ -97,7 +97,7 @@ If the form is valid and you have done the job, you can redirect to avoid refres
 ```php
 //if the email is send, we redirect to avoid F5.
 return $staticController->redirect([
-    'text-info' => 'Email sent')
+    'text-info' => 'Email sent'
 ]);
 ```
 
