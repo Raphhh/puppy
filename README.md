@@ -88,7 +88,7 @@ In the controller, you have to test if the form is valid for you. I the form is 
 ```php
 //if the form is not filled, we display the form with the error
 return $staticController->render([
-    'error' => 'Form not filled'
+    'text-danger' => 'Form not filled'
 ]);
 ```
 
@@ -97,8 +97,16 @@ If the form is valid and you have done the job, you can redirect to avoid refres
 ```php
 //if the email is send, we redirect to avoid F5.
 return $staticController->redirect([
-    'message' => 'Email sent')
+    'text-info' => 'Email sent')
 ]);
+```
+
+It is easy to retrieve the message given to the template (with 'render' or 'redirect' method). You just have to use 'retriever' service.
+
+```twig
+{% if services['retriever'].has('text-danger') %}
+    <p class="text-danger">{{ services['retriever'].get('text-danger') }}</p>
+{% endif %}
 ```
 
 See the DemoModule to have an example to how to proceed.
@@ -145,5 +153,6 @@ Puppy is build with pre-config services:
  - staticController: calls the twig template associated with the current uri. 
  - frontController: calls the controller associated with the current request and display the view.
  - router: finds the controller associated with a route.
+ - retriever: finds the params given to a page.
 
 For more information about session and template, see [puppy-service](https://github.com/Raphhh/puppy-service) documentation.

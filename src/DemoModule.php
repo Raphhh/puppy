@@ -37,7 +37,7 @@ class DemoModule implements IModule
                 if (!$request->get('email')) {
                     //if the form is not filled, we display the form with the error
                     return $staticController->render([
-                        'error' => 'Form not filled'
+                        'text-danger' => 'Form not filled'
                     ]);
                 }
 
@@ -45,7 +45,7 @@ class DemoModule implements IModule
 
                 //if the email is send, we redirect to avoid F5.
                 return $staticController->redirect([
-                    'message' => sprintf('Email sent from %s', $request->get('email'))
+                    'text-info' => sprintf('Email sent from %s', $request->get('email'))
                 ]);
 
             }

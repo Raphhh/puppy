@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-application.git",
-                "reference": "0d1f734d36cee171dae2893716636e7876e18d37"
+                "reference": "9ce172202a8a9b6934847a2315bf26fbb12a1ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/0d1f734d36cee171dae2893716636e7876e18d37",
-                "reference": "0d1f734d36cee171dae2893716636e7876e18d37",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/9ce172202a8a9b6934847a2315bf26fbb12a1ae6",
+                "reference": "9ce172202a8a9b6934847a2315bf26fbb12a1ae6",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "framework",
                 "mvc"
             ],
-            "time": "2015-02-14 12:29:49"
+            "time": "2015-02-14 23:02:22"
         },
         {
             "name": "raphhh/puppy-config",

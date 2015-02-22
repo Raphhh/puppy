@@ -1,0 +1,14 @@
+{% set classes = [
+    'text-muted',
+    'text-primary',
+    'text-success',
+    'text-info',
+    'text-warning',
+    'text-danger',
+]  %}
+
+{% for class in classes %}
+    {% if services['retriever'].has(class) %}
+        <p class="{{ class }}">{{ services['retriever'].get(class) }}</p>
+    {% endif %}
+{%  endfor %}
