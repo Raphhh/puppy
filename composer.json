@@ -29,7 +29,6 @@
         "phpunit/phpunit": "@stable"
     },
     "scripts": {
-        "post-create-project-cmd": "sh ./bin/build",
         "post-install-cmd": "sh ./bin/build",
         "post-update-cmd": "sh ./bin/build"
     }
