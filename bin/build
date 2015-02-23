@@ -1,5 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env php
 
-BASEDIR=$(dirname $0)
+<?php
+use Puppy\Config\Config;
 
-php -f $BASEDIR/build.php $1
+chdir(dirname(__DIR__));
+
+require_once 'vendor/autoload.php';
+
+$config = new Config(isset($argv[1]) ? $argv[1] : '');
+
+echo "\nStarting to build\n";
+
+//remove the cache
+if ($config['cache.path']) {
+    echo " - removing the cache\n";
+    exec('rm -fr "' . getcwd() . DIRECTORY_SEPARATOR . $config['cache.path'] . '"');
+}
