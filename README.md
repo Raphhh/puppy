@@ -31,6 +31,19 @@ Puppy is a brave friend of your static site. It will give you more power with th
 
 First, you have to know that public http access to Puppy is the dir '/public'. It is where you will pu your css or your js.
 
+#### Use the built-in PHP server
+
+Go into the public directory and launch the built-in development server.
+
+```
+cd public
+php -S localhost:8080
+```
+
+Then, you can launch Puppy in your browser (http://localhost:8080). :) 
+
+#### Use any server
+
 If Puppy is not the root of your site, create a local config with the base dir to redefined. For example, if you will launch Puppy in the root 'localhost/puppy/public', your local config will be:
 
 ```php
@@ -115,7 +128,11 @@ See the DemoModule to have an example to how to proceed.
 
 Add all your config you want, depending on each environment. Puppy uses an easy config provider. 
 
-You config is defined in the dir '/config'. By default, you have two config (global and dev). 'dev' config is not loaded in prod env. But to specify you are in dev env (and avoid cache), you have to set the env variable 'APP_ENV'.
+You config is defined in the dir '/config'. 
+
+By default, you have two versioned config (global and dev). 'dev' config is not loaded in prod env. But to specify you are in dev env (and avoid cache), you have to set the env variable 'APP_ENV'.
+
+Moreover, you have a third config (local) which is not versioned. You can specify there stuff only for you.
 
 For more information, see [puppy-config](https://github.com/Raphhh/puppy-config) documentation.
 
@@ -156,3 +173,21 @@ Puppy is build with pre-config services:
  - retriever: finds the params given to a page.
 
 For more information about session and template, see [puppy-service](https://github.com/Raphhh/puppy-service) documentation.
+
+
+## HTTP response (todo)
+
+You can manage the header of your HTTP response with the method 'after'. So, for example, you can define the http cache.
+
+```php
+$application->after(function(Response $response){
+        ...
+    });
+```
+
+## Error (todo)
+
+Puppy handles automatically your errors and exceptions. It logs them into a files and can send you an email.
+
+For error handling, see the [puppy-application](https://github.com/Raphhh/puppy-application) documentation.
+ 
