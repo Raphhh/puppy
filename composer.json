@@ -31,5 +31,9 @@
     "scripts": {
         "post-install-cmd": "sh ./bin/build",
         "post-update-cmd": "sh ./bin/build"
-    }
+    },
+    "bin": [
+        "bin/build",
+        "bin/run"
+    ]
 }
