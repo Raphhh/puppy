@@ -33,14 +33,19 @@ First, you have to know that public http access to Puppy is the dir '/public'. I
 
 #### Use the built-in PHP server
 
-Go into the public directory and launch the built-in development server.
+Use the run command in your console:
 
 ```
-cd public
-php -S localhost:8080
+$ bin/run
 ```
 
-Then, you can launch Puppy in your browser (http://localhost:8080). :) 
+Then, you can launch Puppy in your browser at http://localhost:8080.
+
+You can also specify you want to run the dev env (no cache).
+
+```
+$ bin/run dev
+```
 
 #### Use any server
 
@@ -56,7 +61,17 @@ return [
 
 Local config is not versioned and will never go to production. For more information about config, see specific section. 
 
+See also how to set the dev env variable 'APP_ENV'.
+
 Then, you can launch Puppy in your browser. :) 
+
+#### Clean the cache
+
+To clean the cache, rebuild your project:
+
+```
+$ bin/build
+```
 
 ### Create your own site
 
