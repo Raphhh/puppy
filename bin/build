@@ -16,3 +16,16 @@ if ($config['cache.path']) {
     echo " - removing the cache\n";
     exec('rm -fr "' . getcwd() . DIRECTORY_SEPARATOR . $config['cache.path'] . '"');
 }
+
+//add local config
+if (!file_exists($config->getLocalFilePath())) {
+    echo " - setting local config\n";
+    $localConfigTemplate = <<<'EOD'
+<?php
+return [
+    //'baseDir' => '/project/path/public/',
+];
+
+EOD;
+    file_put_contents($config->getLocalFilePath(), $localConfigTemplate);
+}
