@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b5065550e26b0f03f454b71f64380b3e",
+    "hash": "19d0f4290b69585cfb868e2d8c7b79f1",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-application.git",
-                "reference": "9ce172202a8a9b6934847a2315bf26fbb12a1ae6"
+                "reference": "00d19b48f47d5b23f8eea51270cc1fb690b5142b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/9ce172202a8a9b6934847a2315bf26fbb12a1ae6",
-                "reference": "9ce172202a8a9b6934847a2315bf26fbb12a1ae6",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/00d19b48f47d5b23f8eea51270cc1fb690b5142b",
+                "reference": "00d19b48f47d5b23f8eea51270cc1fb690b5142b",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "framework",
                 "mvc"
             ],
-            "time": "2015-02-14 23:02:22"
+            "time": "2015-02-23 22:42:16"
         },
         {
             "name": "raphhh/puppy-config",
@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-config.git",
-                "reference": "8c2af90b03ab098a63399dbef7e6bcaeae30bfa6"
+                "reference": "c3c30425f15f6398657fd949e53dcb2243c69317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/8c2af90b03ab098a63399dbef7e6bcaeae30bfa6",
-                "reference": "8c2af90b03ab098a63399dbef7e6bcaeae30bfa6",
+                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/c3c30425f15f6398657fd949e53dcb2243c69317",
+                "reference": "c3c30425f15f6398657fd949e53dcb2243c69317",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
             "keywords": [
                 "config"
             ],
-            "time": "2015-02-08 20:17:14"
+            "time": "2015-02-23 23:04:45"
         },
         {
             "name": "raphhh/puppy-service",
