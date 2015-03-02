@@ -73,7 +73,7 @@ To clean the cache, rebuild your project:
 $ bin/build
 ```
 
-### Create your own site
+## Create your own site
 
 Now you want to code your site. Just be careful with the cache of Puppy. If Puppy is cached, your modifications will not appear in the screen. See the config section to disable the cache.
 
