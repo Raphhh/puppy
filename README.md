@@ -16,6 +16,14 @@ With Puppy, you will be able to build websites directly in Twig, without any pro
 Puppy uses a simple route system which you can easily extend to add your own behaviour and get more interactivity. For example, you can create a form which will be handled in back-end with Puppy.
 
 
+## Resources
+
+[Website](http://www.puppyframework.com/) |
+[puppy-application](https://github.com/Raphhh/puppy-application) |
+[puppy-config](https://github.com/Raphhh/puppy-config) |
+[puppy-service](https://github.com/Raphhh/puppy-service) |
+
+
 ## Installation
 
 ```
