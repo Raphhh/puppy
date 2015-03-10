@@ -96,9 +96,9 @@ class TemplateRouter
      */
     private function parseUrl(Request $request)
     {
-        if (!empty($this->getConfig()['baseDir'])) {
+        if (!empty($this->getConfig()['baseUrl'])) {
             $urlData = parse_url(
-                str_replace($this->getConfig()['baseDir'], '', $request->getRequestUri())
+                str_replace($this->getConfig()['baseUrl'], '', $request->getRequestUri())
             );
             return $urlData;
         }
