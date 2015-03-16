@@ -9,12 +9,11 @@
 [![Reference Status](https://www.versioneye.com/php/raphhh:puppy/reference_badge.svg?style=flat)](https://www.versioneye.com/php/raphhh:puppy/references)
 [![License](https://poser.pugx.org/raphhh/puppy/license.svg)](https://packagist.org/packages/raphhh/puppy)
 
-Puppy is micro-framework build in PHP. 
-It runs for you with happiness and creates static websites using [Twig templates](http://twig.sensiolabs.org/)!
+Puppy is micro-framework build in PHP that helps you to create websites using [Twig templates](http://twig.sensiolabs.org/)!
 
-Puppy is a brave friend of your static site, directly ready for use. It will give you more power with the help of Twig. You will be able to build your website directly in Twig, without any problems of routes or configuration. 
+With Puppy, you will be able to build websites directly in Twig, without any problems of routes or configuration. Puppy is ready-to-use: you just have to implement your html code.
 
-Puppy uses a simple route system which you can easily extends to add your own behaviour and get a more interactive site. For example, you can create a form which will be handle in backend with Puppy.
+Puppy uses a simple route system which you can easily extends to add your own behaviour and get a more interactivity. For example, you can create a form which will be handle in backend with Puppy.
 
 
 ## Installation
