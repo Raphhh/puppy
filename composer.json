@@ -1,6 +1,6 @@
 {
     "name": "raphhh/puppy",
-    "description": "A tiny, brave and faithful PHP micro framework",
+    "description": "A micro-framework to create websites using Twig",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -9,8 +9,8 @@
             "email": "raphael@raphaellefebvre.be"
         }
     ],
-    "keywords": ["MVC", "framework"],
-    "homepage": "https://github.com/Raphhh/puppy",
+    "keywords": ["MVC", "framework", "twig"],
+    "homepage": "http://www.puppyframework.com",
     "autoload": {
         "psr-4": {
             "Puppy\\": [
