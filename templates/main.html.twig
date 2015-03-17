@@ -9,18 +9,18 @@
     <meta name="generator" content="https://github.com/Raphhh/puppy">
 
     {% block css %}
-        <link rel="stylesheet" href="{{ services['config']['baseUrl'] }}assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ 'assets/bootstrap/css/bootstrap.min.css'|link }}">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="{{ services['config']['baseUrl'] }}assets/bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{{ services['config']['baseUrl'] }}assets/main/css/main.css">
+        <link rel="stylesheet" href="{{ 'assets/bootstrap/css/bootstrap-theme.min.css'|link }}">
+        <link rel="stylesheet" href="{{ 'assets/main/css/main.css'|link }}">
     {% endblock %}
 
-    <script src="{{ services['config']['baseUrl'] }}assets/modernizr/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="{{ 'assets/modernizr/js/modernizr-2.8.3-respond-1.4.2.min.js'|link }}"></script>
 </head>
 <body>
 
@@ -28,11 +28,11 @@
 
 {% block js %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ services['config']['baseUrl'] }}assets/jquery/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="{{ 'assets/jquery/js/jquery-1.11.2.min.js'|link }}"><\/script>')</script>
 
-    <script src="{{ services['config']['baseUrl'] }}assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ 'assets/bootstrap/js/bootstrap.min.js'|link }}"></script>
 
-    <script src="{{ services['config']['baseUrl'] }}assets/main/js/main.js"></script>
+    <script src="{{ 'assets/main/js/main.js'|link }}"></script>
 {% endblock %}
 </body>
 </html>

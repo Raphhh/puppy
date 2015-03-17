@@ -4,6 +4,7 @@ namespace Puppy;
 use Puppy\Module\IModule;
 use Puppy\Service\Session;
 use Puppy\Service\Template;
+use Puppy\Service\Twig\TwigExtension;
 
 /**
  * Class MainModule
@@ -21,7 +22,9 @@ class MainModule implements IModule
      */
     public function init(Application $application)
     {
-        $application->addService('template', new Template());
+        $application->addService('template', new Template([
+            new TwigExtension($application->getServices()),
+        ]));
         $application->addService('session', new Session());
     }
 }

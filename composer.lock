@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-service.git",
-                "reference": "47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de"
+                "reference": "905833688dfe9e3de13e76a9cb9654ac3c8b3b3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de",
-                "reference": "47012a1dc9b25ce1dcb96b76b5a7b3c27eb344de",
+                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/905833688dfe9e3de13e76a9cb9654ac3c8b3b3b",
+                "reference": "905833688dfe9e3de13e76a9cb9654ac3c8b3b3b",
                 "shasum": ""
             },
             "require": {
