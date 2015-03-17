@@ -7,7 +7,7 @@
 [![Total Downloads](https://poser.pugx.org/raphhh/puppy/downloads.svg)](https://packagist.org/packages/raphhh/puppy)
 [![License](https://poser.pugx.org/raphhh/puppy/license.svg)](https://packagist.org/packages/raphhh/puppy)
 
-Puppy is a micro-framework built in PHP that helps you to create websites using [Twig templates](http://twig.sensiolabs.org/)!
+Puppy is a micro-framework built in PHP that helps you to create websites using [Twig](http://twig.sensiolabs.org/) templates!
 
 With Puppy, you will be able to build websites directly in Twig, without any problems of routes nor configuration. Puppy is ready-to-use: you just have to implement your html code.
 
