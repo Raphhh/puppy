@@ -22,15 +22,11 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 $ composer create-project raphhh/puppy path/to/my/project
 ```
 
-## Static website with Twig
-
-Puppy is a brave friend of your static site. It will give you more power with the help of Twig.
-
-### Run the demo
+## Run the demo
 
 First, you have to know that public http access to Puppy is the dir '/public'. It is where you will put your css or your js.
 
-#### Use the built-in PHP server
+### Use the built-in PHP server
 
 Use the run command in your console:
 
@@ -46,7 +42,7 @@ You can also specify you want to run the dev env (no cache).
 $ bin/run dev
 ```
 
-#### Use any server
+### Use any server
 
 If Puppy is not the root of your site, create a local config with the base dir to redefine. For example, if you will launch Puppy in the root 'localhost/puppy/public', your local config will be:
 
@@ -64,7 +60,7 @@ See also how to set the dev env variable 'APP_ENV'.
 
 Then, you can launch Puppy in your browser. :) 
 
-#### Clean the cache
+### Clean the cache
 
 To clean the cache, rebuild your project:
 
@@ -72,7 +68,7 @@ To clean the cache, rebuild your project:
 $ bin/build
 ```
 
-## Create your own site
+## Create your own application
 
 Now you want to code your site. Just be careful with the cache of Puppy. If Puppy is cached, your modifications will not appear in the screen. See the config section to disable the cache.
 
