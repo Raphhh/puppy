@@ -58,7 +58,7 @@ If Puppy is not the root of your site, create a local config with the base dir t
 // config/local.php
 <?php
 return [
-    'baseUrl' => '/puppy/public/', //use only a absolute path
+    'baseUrl' => '/puppy/public/', //use only an absolute path
 ];
 ```
 
