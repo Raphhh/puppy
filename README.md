@@ -32,8 +32,6 @@ $ composer create-project raphhh/puppy path/to/my/project @dev
 
 ## Run the demo
 
-First, you have to know that public http access to Puppy is the dir '/public'. It is where you will put your css or your js.
-
 ### Use the built-in PHP server
 
 Use the run command in your console:
@@ -52,7 +50,9 @@ $ bin/run dev
 
 ### Use any server
 
-If Puppy is not the root of your site, create a local config with the base dir to redefine. For example, if you will launch Puppy in the root 'localhost/puppy/public', your local config will be:
+First, you have to know that the public http access to Puppy is the dir '/public'. It is where you will put your css or your js.
+
+If Puppy is not located at the root of your url address, create a local config to define the base url. For example, if you will launch Puppy at 'http://localhost/puppy/public', your local config must be:
 
 ```php
 // config/local.php
@@ -84,7 +84,7 @@ Now you want to code your site. Just be careful with the cache of Puppy. If Pupp
 
 Consider directory '/templates/public' like a mirror of your public site access, but specially dedicated to twig templates. For each page you want in your website, you have to put a twig file in this directory. Name this file as if it was a html file, but complete it with extension '.twig'.
 
-For example, for a home page, normally you will use a 'index.html' at the root of your public area. Here, with Puppy, you have to create a file '/templates/public/index.html.twig'. Same name, but with specific extension. Then, open the base url of your website, and you will go to this template. You can also call the equivalent html file in your address: '/index.html'. :)
+For example, for a home page, normally you will use a 'index.html' at the root of your public area. Here, with Puppy, you have to create a file '/templates/public/index.html.twig'. Same name, but with specific extension.
 
 So, for example, these uri will call those twig:
 
@@ -98,7 +98,7 @@ So, for example, these uri will call those twig:
 
 Now, imagine you want to add a second page, like a contact page for example. So, you want to display a new template for the url '/contact.html'. You just have to create this new template in the file '/templates/public/contact.html.twig'.
 
-Once you have create your second template file, there is some duplicated code in your html (header, menu, footer, ...). No problem, here comes Twig! You can, for example, group your common base html code in a separate file that each page will extend.
+Once you have created your second template file, there is some duplicated code in your html (header, menu, footer, ...). No problem, here comes Twig! You can, for example, group your common base html code in a separate file that each page will extend.
 
 As this file must not be directly accessible from an url, it must not appear in the '/templates/public' dir. You have to put it directly at the root of the '/templates' dir. So, it will never be called from any url.
 
