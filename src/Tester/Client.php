@@ -26,10 +26,8 @@ class Client
         $_POST = $post;
 
         chdir(dirname(dirname(__DIR__)));
-        $config = new Config('test');
-        $config['session.sessionStorageClass'] = 'Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage';
 
-        $puppy = new Application($config, Request::createFromGlobals());
+        $puppy = new Application(new Config('test'), Request::createFromGlobals());
         $puppy->initModules((new ModuleFactory())->createFromApplication($puppy));
         $puppy->run();
 
