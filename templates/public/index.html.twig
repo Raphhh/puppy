@@ -21,7 +21,17 @@
                 <h2>Config</h2>
                 <ul>
                     {% for key, var in services['config'] %}
-                        <li>{{ key }}: {{ var }}</li>
+                        {% if var is iterable %}
+                            <li>{{ key }}:
+                                <ul>
+                                    {% for subkey, subvar in var %}
+                                        <li>{{ subkey }}: {{ subvar }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li>{{ key }}: {{ var }}</li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
