@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "19d0f4290b69585cfb868e2d8c7b79f1",
+    "hash": "86ff9e5d9270683a31776b80ccf96679",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -102,7 +102,7 @@
                 "framework",
                 "mvc"
             ],
-            "time": "2015-03-02 21:46:19"
+            "time": "2015-03-22 21:41:27"
         },
         {
             "name": "raphhh/puppy-config",
@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-config.git",
-                "reference": "c3c30425f15f6398657fd949e53dcb2243c69317"
+                "reference": "059505a0a0d9e6ae7a7c9c2b3bb498583df76129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/c3c30425f15f6398657fd949e53dcb2243c69317",
-                "reference": "c3c30425f15f6398657fd949e53dcb2243c69317",
+                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/059505a0a0d9e6ae7a7c9c2b3bb498583df76129",
+                "reference": "059505a0a0d9e6ae7a7c9c2b3bb498583df76129",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
             "keywords": [
                 "config"
             ],
-            "time": "2015-02-26 20:11:55"
+            "time": "2015-03-08 20:21:26"
         },
         {
             "name": "raphhh/puppy-service",
@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-service.git",
-                "reference": "905833688dfe9e3de13e76a9cb9654ac3c8b3b3b"
+                "reference": "5c59a0ed319cb67c75273b6c1cec4488e7301c17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/905833688dfe9e3de13e76a9cb9654ac3c8b3b3b",
-                "reference": "905833688dfe9e3de13e76a9cb9654ac3c8b3b3b",
+                "url": "https://api.github.com/repos/Raphhh/puppy-service/zipball/5c59a0ed319cb67c75273b6c1cec4488e7301c17",
+                "reference": "5c59a0ed319cb67c75273b6c1cec4488e7301c17",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
             "keywords": [
                 "puppy"
             ],
-            "time": "2015-02-08 20:59:18"
+            "time": "2015-03-21 23:58:33"
         },
         {
             "name": "raphhh/trex-parser",
@@ -292,24 +292,25 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.6.4",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "8fa63d614d56ccfe033e30411d90913cfc483ff6"
+                "reference": "d527885e37b55ec0e3dc6f4b70566d0f9b2f2388"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/8fa63d614d56ccfe033e30411d90913cfc483ff6",
-                "reference": "8fa63d614d56ccfe033e30411d90913cfc483ff6",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/d527885e37b55ec0e3dc6f4b70566d0f9b2f2388",
+                "reference": "d527885e37b55ec0e3dc6f4b70566d0f9b2f2388",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/expression-language": "~2.4"
+                "symfony/expression-language": "~2.4",
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -341,7 +342,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2015-02-01 16:10:57"
+            "time": "2015-03-13 17:37:22"
         },
         {
             "name": "tedivm/stash",
@@ -1362,21 +1363,24 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.4",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8"
+                "reference": "0cd8e72071e46e15fc072270ae39ea1b66b10a9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/60ed7751671113cf1ee7d7778e691642c2e9acd8",
-                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/0cd8e72071e46e15fc072270ae39ea1b66b10a9d",
+                "reference": "0cd8e72071e46e15fc072270ae39ea1b66b10a9d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -1405,7 +1409,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-25 04:39:26"
+            "time": "2015-03-12 10:28:44"
         }
     ],
     "aliases": [],
