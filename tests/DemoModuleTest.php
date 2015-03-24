@@ -11,6 +11,9 @@ use Puppy\Tester\Client;
 class DemoModuleTest extends \PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @medium
+     */
     public function testHomePage()
     {
         $client = new Client();
@@ -18,6 +21,9 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
         $client->run('/');
     }
 
+    /**
+     * @medium
+     */
     public function testContact()
     {
         $client = new Client();
@@ -25,6 +31,9 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
         $client->run('/contact');
     }
 
+    /**
+     * @medium
+     */
     public function testContactWithEmptyPostedForm()
     {
         $client = new Client();
@@ -32,6 +41,9 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
         $client->run('/contact', 'POST');
     }
 
+    /**
+     * @medium
+     */
     public function testContactWithPostedForm()
     {
         $client = new Client();
