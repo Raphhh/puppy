@@ -14,6 +14,19 @@ use Symfony\Component\HttpFoundation\Request;
 class Client 
 {
     /**
+     * @var string
+     */
+    private $env;
+
+    /**
+     * @param string $env
+     */
+    public function __construct($env='test')
+    {
+        $this->setEnv($env);
+    }
+
+    /**
      * @param $requestUri
      * @param string $method
      * @param array $post
@@ -28,7 +41,7 @@ class Client
         $cwd = getcwd();
         chdir(dirname(dirname(__DIR__)));
 
-        $puppy = new Application(new Config('test'), Request::createFromGlobals());
+        $puppy = new Application(new Config($this->getEnv()), Request::createFromGlobals());
         $puppy->initModules((new ModuleFactory())->createFromApplication($puppy));
         $puppy->run();
 
@@ -39,5 +52,25 @@ class Client
         chdir($cwd);
 
         return $puppy;
+    }
+
+    /**
+     * Getter of $env
+     *
+     * @return string
+     */
+    public function getEnv()
+    {
+        return $this->env;
+    }
+
+    /**
+     * Setter of $env
+     *
+     * @param string $env
+     */
+    public function setEnv($env)
+    {
+        $this->env = (string)$env;
     }
 }
