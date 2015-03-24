@@ -25,6 +25,7 @@ class Client
         $_SERVER['REQUEST_METHOD'] = $method;
         $_POST = $post;
 
+        $cwd = getcwd();
         chdir(dirname(dirname(__DIR__)));
 
         $puppy = new Application(new Config('test'), Request::createFromGlobals());
@@ -34,6 +35,8 @@ class Client
         unset($_SERVER['REQUEST_URI']);
         unset($_SERVER['REQUEST_METHOD']);
         $_POST = [];
+
+        chdir($cwd);
 
         return $puppy;
     }
