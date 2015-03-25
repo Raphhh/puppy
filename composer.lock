@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-application.git",
-                "reference": "cf8111cca49cc3196ef3fc4c35638239eab78cac"
+                "reference": "0be8dbbad2616966fa20434adb4ca0f8f52fef4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/cf8111cca49cc3196ef3fc4c35638239eab78cac",
-                "reference": "cf8111cca49cc3196ef3fc4c35638239eab78cac",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/0be8dbbad2616966fa20434adb4ca0f8f52fef4f",
+                "reference": "0be8dbbad2616966fa20434adb4ca0f8f52fef4f",
                 "shasum": ""
             },
             "require": {
