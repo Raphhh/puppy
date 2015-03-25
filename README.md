@@ -168,10 +168,10 @@ For more information, see [puppy-application](https://github.com/Raphhh/puppy-ap
 
 ## Services
 
-Add all your services you need. Puppy uses a simple service container.
+Add all your services you need. Puppy uses [Pimple](https://github.com/silexphp/Pimple) as service container.
 
 ```php
-$application->addService('serviceName', function(\ArrayAccess $services){
+$application->addService('serviceName', function(Container $services){
     return new MyService();
 });
 ```
@@ -209,3 +209,8 @@ Puppy handles automatically your errors and exceptions. It logs them into a file
 
 For error handling, see the [puppy-application](https://github.com/Raphhh/puppy-application) documentation.
  
+## Integration and deployment
+
+### How to launch the tests
+
+### How to deploy
