@@ -26,7 +26,7 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 
 Use [Composer](http://getcomposer.org/) to download Puppy:
 
-```
+```console
 $ composer create-project raphhh/puppy path/to/my/project @dev
 ```
 
@@ -36,16 +36,16 @@ $ composer create-project raphhh/puppy path/to/my/project @dev
 
 Use the run command in your console:
 
-```
-$ bin/run
+```console
+$ puppy run
 ```
 
 Then, you can launch Puppy in your browser at http://localhost:8080.
 
 You can also specify you want to run the dev env (no cache).
 
-```
-$ bin/run dev
+```console
+$ puppy run dev
 ```
 
 ### Use any server
@@ -72,8 +72,8 @@ Then, you can launch Puppy in your browser. :)
 
 To clean the cache, rebuild your project:
 
-```
-$ bin/build
+```console
+$ puppy build
 ```
 
 ## Create your own application
@@ -211,6 +211,10 @@ For error handling, see the [puppy-application](https://github.com/Raphhh/puppy-
  
 ## Integration and deployment
 
-### How to launch the tests
+### How to launch the tests?
 
-### How to deploy
+See Travis config in .travis.yml.
+
+### How to deploy?
+
+See composer install script in composer.json.
