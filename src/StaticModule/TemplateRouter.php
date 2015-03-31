@@ -56,10 +56,10 @@ class TemplateRouter
         $url = $this->getUrl($request);
 
         if ($url) {
-            $pathList[] = $url . DIRECTORY_SEPARATOR . $this->getDefaultFile();  //foo => foo/index.html.twig
+            $pathList[] = $url . DIRECTORY_SEPARATOR . $this->getDefaultFile($request);  //foo => foo/index.html.twig
             $pathList[] = $url . $this->getTemplateFileExtension(); //index.html => index.html.twig
         } else {
-            $pathList[] = $this->getDefaultFile(); // / => index.html.twig
+            $pathList[] = $this->getDefaultFile($request); // / => index.html.twig
         }
 
         return $this->cleanPathList($pathList);
@@ -103,23 +103,28 @@ class TemplateRouter
     }
 
     /**
+     * @param Request $request
      * @return string
      */
-    private function getDefaultFile()
+    private function getDefaultFile(Request $request)
     {
         if (!empty($this->getConfig()['template.file.default'])) {
             return $this->getConfig()['template.file.default'] . $this->getTemplateFileExtension();
         }
-        return 'index' . $this->getExtendedFileExtension();
+        return 'index' . $this->getExtendedFileExtension($request);
     }
 
     /**
+     * @param Request $request
      * @return string
      */
-    private function getServerFileExtension()
+    private function getServerFileExtension(Request $request)
     {
         if (!empty($this->getConfig()['template.file.server.extension'])) {
             return $this->getConfig()['template.file.server.extension'];
+        }
+        if($request->getRequestFormat()){
+            return '.' . $request->getRequestFormat();
         }
         return '.html';
     }
@@ -136,11 +141,12 @@ class TemplateRouter
     }
 
     /**
+     * @param Request $request
      * @return string
      */
-    private function getExtendedFileExtension()
+    private function getExtendedFileExtension(Request $request)
     {
-        return $this->getServerFileExtension() . $this->getTemplateFileExtension();
+        return $this->getServerFileExtension($request) . $this->getTemplateFileExtension();
     }
 
     /**
