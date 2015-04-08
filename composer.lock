@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-config.git",
-                "reference": "d5ef6888132bdf5993bd080f34f67575f45769ae"
+                "reference": "4c088c6729f4a54fe14f5e1d8ad22d019e06320a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/d5ef6888132bdf5993bd080f34f67575f45769ae",
-                "reference": "d5ef6888132bdf5993bd080f34f67575f45769ae",
+                "url": "https://api.github.com/repos/Raphhh/puppy-config/zipball/4c088c6729f4a54fe14f5e1d8ad22d019e06320a",
+                "reference": "4c088c6729f4a54fe14f5e1d8ad22d019e06320a",
                 "shasum": ""
             },
             "require": {
