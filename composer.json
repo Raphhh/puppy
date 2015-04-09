@@ -21,9 +21,9 @@
     },
     "require": {
         "php": ">=5.4",
-        "raphhh/puppy-application": "@dev",
-        "raphhh/puppy-config": "@dev",
-        "raphhh/puppy-service": "@dev"
+        "raphhh/puppy-application": "~1.0",
+        "raphhh/puppy-config": "~1.0",
+        "raphhh/puppy-service": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"
