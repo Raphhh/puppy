@@ -27,7 +27,7 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 Use [Composer](http://getcomposer.org/) to download Puppy:
 
 ```console
-$ composer create-project raphhh/puppy path/to/my/project @dev
+$ composer create-project raphhh/puppy path/to/my/project
 ```
 
 ## Run the demo
