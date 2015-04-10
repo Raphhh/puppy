@@ -1,7 +1,7 @@
 <?php
 namespace Puppy;
 
-use Puppy\Tester\Client;
+use Puppy\Client\Client;
 
 /**
  * Class DemoModuleTest
@@ -16,7 +16,7 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testHomePage()
     {
-        $client = new Client();
+        $client = new Client('test', dirname(__DIR__));
         $this->expectOutputRegex('/Good dog!/');
         $client->run('/');
     }
@@ -26,7 +26,7 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testContact()
     {
-        $client = new Client();
+        $client = new Client('test', dirname(__DIR__));
         $this->expectOutputRegex('/Fill the form/');
         $client->run('/contact');
     }
@@ -36,7 +36,7 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testContactWithEmptyPostedForm()
     {
-        $client = new Client();
+        $client = new Client('test', dirname(__DIR__));
         $this->expectOutputRegex('/Form not filled/');
         $client->run('/contact', 'POST');
     }
@@ -46,7 +46,7 @@ class DemoModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testContactWithPostedForm()
     {
-        $client = new Client();
+        $client = new Client('test', dirname(__DIR__));
         $this->expectOutputRegex('/Redirecting to \/contact/');
         $application = $client->run('/contact', 'POST', ['email' => 'value']);
         $session = $application->getService('session');

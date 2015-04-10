@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9d45ba4d21c246e56aba4a504253d8b",
+    "hash": "df2c3674738b91dc909dd694b0460098",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -201,21 +201,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-static-route.git",
-                "reference": "271e57cf1b233d0a515c11a680a4b8f8dbee3f15"
+                "reference": "52a10739cc0572d6a9f0e9a109a7f7dc69edff56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-static-route/zipball/271e57cf1b233d0a515c11a680a4b8f8dbee3f15",
-                "reference": "271e57cf1b233d0a515c11a680a4b8f8dbee3f15",
+                "url": "https://api.github.com/repos/Raphhh/puppy-static-route/zipball/52a10739cc0572d6a9f0e9a109a7f7dc69edff56",
+                "reference": "52a10739cc0572d6a9f0e9a109a7f7dc69edff56",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4",
-                "raphhh/puppy": "@dev",
                 "raphhh/puppy-application": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "@stable"
+                "phpunit/phpunit": "@stable",
+                "raphhh/puppy-template": "@dev"
             },
             "type": "library",
             "autoload": {
@@ -237,7 +237,7 @@
                 }
             ],
             "description": "Static routing module for Puppy framework",
-            "time": "2015-04-10 08:51:19"
+            "time": "2015-04-10 19:51:29"
         },
         {
             "name": "raphhh/puppy-template",
@@ -1133,6 +1133,44 @@
             "time": "2015-04-02 05:36:41"
         },
         {
+            "name": "raphhh/puppy-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/puppy-client.git",
+                "reference": "342dec8c66943903568286726383e3bbe7bd244d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/puppy-client/zipball/342dec8c66943903568286726383e3bbe7bd244d",
+                "reference": "342dec8c66943903568286726383e3bbe7bd244d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "raphhh/puppy-application": "@dev",
+                "raphhh/puppy-config": "@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puppy\\Client\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "client to test puppy",
+            "time": "2015-04-10 20:06:03"
+        },
+        {
             "name": "sebastian/comparator",
             "version": "1.1.1",
             "source": {
@@ -1510,7 +1548,8 @@
         "raphhh/puppy-static-route": 20,
         "raphhh/puppy-template": 20,
         "raphhh/puppy-session": 20,
-        "phpunit/phpunit": 0
+        "phpunit/phpunit": 0,
+        "raphhh/puppy-client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

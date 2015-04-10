@@ -28,7 +28,8 @@
         "raphhh/puppy-session": "@dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "@stable"
+        "phpunit/phpunit": "@stable",
+        "raphhh/puppy-client": "@dev"
     },
     "scripts": {
         "post-install-cmd": "php bin/build",
