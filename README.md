@@ -19,7 +19,9 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 [Website](http://www.puppyframework.com/) |
 [puppy-application](https://github.com/Raphhh/puppy-application) |
 [puppy-config](https://github.com/Raphhh/puppy-config) |
-[puppy-service](https://github.com/Raphhh/puppy-service) |
+[puppy-template](https://github.com/Raphhh/puppy-template) |
+[puppy-session](https://github.com/Raphhh/puppy-session) |
+[puppy-static-route](https://github.com/Raphhh/puppy-static-route)
 
 
 ## Installation
