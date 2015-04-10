@@ -3,7 +3,7 @@ namespace Puppy;
 
 use Puppy\Controller\AppController;
 use Puppy\Module\IModule;
-use Puppy\StaticModule\StaticController;
+use Puppy\StaticRoute\StaticController;
 use Symfony\Component\HttpFoundation\Request;
 
 /**

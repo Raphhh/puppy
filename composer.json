@@ -23,7 +23,8 @@
         "php": ">=5.4",
         "raphhh/puppy-application": "~1.0",
         "raphhh/puppy-config": "~1.0",
-        "raphhh/puppy-service": "~1.0"
+        "raphhh/puppy-service": "~1.0",
+        "raphhh/puppy-static-route": "@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"

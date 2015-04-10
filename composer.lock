@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90b7303bb6b3df14d0fc0a4fb2f0d061",
+    "hash": "eb11d18027111c8d6d49e64b3042979c",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -198,6 +198,50 @@
                 "puppy"
             ],
             "time": "2015-03-21 23:58:33"
+        },
+        {
+            "name": "raphhh/puppy-static-route",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Raphhh/puppy-static-route.git",
+                "reference": "c3d6de9d9b8b83715251b3fb8e30150d541ae2af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Raphhh/puppy-static-route/zipball/c3d6de9d9b8b83715251b3fb8e30150d541ae2af",
+                "reference": "c3d6de9d9b8b83715251b3fb8e30150d541ae2af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "raphhh/puppy": "@dev",
+                "raphhh/puppy-application": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puppy\\StaticRoute\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphaël Lefebvre",
+                    "email": "raphael@raphaellefebvre.be"
+                }
+            ],
+            "description": "Static routing module for Puppy framework",
+            "time": "2015-04-10 08:45:32"
         },
         {
             "name": "raphhh/trex-parser",
@@ -1419,6 +1463,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "raphhh/puppy-static-route": 20,
         "phpunit/phpunit": 0
     },
     "prefer-stable": false,
