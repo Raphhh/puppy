@@ -16,13 +16,71 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 
 ## Resources
 
-[Website](http://www.puppyframework.com/) |
-[puppy-application](https://github.com/Raphhh/puppy-application) |
-[puppy-config](https://github.com/Raphhh/puppy-config) |
-[puppy-template](https://github.com/Raphhh/puppy-template) |
-[puppy-session](https://github.com/Raphhh/puppy-session) |
-[puppy-static-route](https://github.com/Raphhh/puppy-static-route)
+### Website
+[http://www.puppyframework.com/](http://www.puppyframework.com/)
 
+### Code
+#### Core
+- [puppy-application](https://github.com/Raphhh/puppy-application)
+- [puppy-config](https://github.com/Raphhh/puppy-config)
+
+#### Modules
+- [puppy-template](https://github.com/Raphhh/puppy-template)
+- [puppy-session](https://github.com/Raphhh/puppy-session)
+- [puppy-static-route](https://github.com/Raphhh/puppy-static-route)
+
+#### Testing
+ - [puppy-client](https://github.com/Raphhh/puppy-client)
+
+## About
+
+Puppy is a skeleton that runs Puppy/Application. It uses Puppy\Config as config manager.
+
+It includes some default modules:
+ - [Template module](https://github.com/Raphhh/puppy-template) allows to use Twig as template engine.
+ - [Static routing module](https://github.com/Raphhh/puppy-static-route) allows to route request uri directly to a template.
+ - [Session module](https://github.com/Raphhh/puppy-session) helps to manage the session.
+
+### Files architecture
+
+    ├── bin
+    |   ├── build
+    |   └── run
+    ├── config
+    |   ├── dev.php
+    |   ├── global.php
+    |   └── tets.php
+    ├── public
+    |   ├── .htaccess
+    |   ├── index.php
+    |   └── robots.txt
+    ├── src
+    ├── templates
+    |   └── public
+    |       └── index.html.twig
+    ├── tests
+    ├── vars
+    ├── vendor
+    ├── .editorconfig
+    ├── .gitattributes
+    ├── .gitignore
+    ├── .scrutinizer.yml
+    ├── .travis.yml
+    ├── composer.json
+    ├── composer.lock
+    ├── LICENSE
+    ├── phpunit.xml.dist
+    ├── puppy
+    └── README.md
+
+- "bin" contains the executable that you can launch in the console with the command "puppy".
+- "config" contains all your config files.
+- "public" is the web entry point.
+- "src" contains all your PHP code.
+- "templates" contains your twig files. It is used by the "static routing" module. 
+- "tests" contains all your PHP tests. See [PHPUnit](https://phpunit.de/) for more information.
+- "vars" is a tmp folder, containing things like cache, ...
+- "vendor" contains all your PHP dependencies. See [Composer](https://getcomposer.org/) for more information.
 
 ## Installation
 
@@ -80,7 +138,24 @@ $ puppy build
 
 ## Create your own application
 
-Now you want to code your site. Just be careful with the cache of Puppy. If Puppy is cached, your modifications will not appear in the screen. See the config section to disable the cache.
+Now you want to code your site. 
+
+First, be careful with the cache of Puppy. If Puppy is cached, your modifications will not appear in the screen. See the config section to disable the cache.
+
+Now, let's see how the static routing works. 
+
+### Static routing in a nutshell
+
+The "static routing" is a module that routes an uri to a template file. The router takes the request uri and tries to find an associated template.
+
+Note that the template files must be in the dir "template/public/".
+
+If the request uri points to a dir and not a file, a default file will be searched. By default: "<dir>/index.html.twig".
+
+If no file is found in the templates, it returns an HTTP 404 error.
+
+Note that, because it is a module (raphhh/puppy-static-route), you can remove it. See module section for more information.
+
 
 ### Add new pages
 
@@ -194,6 +269,23 @@ Puppy is built with pre-config services:
 
 For more information about session and template, see [puppy-service](https://github.com/Raphhh/puppy-service) documentation.
 
+## Modules
+
+A module is an external package that you can add to Puppy like a pluggin. A module can add specific services, controllers, config, and so on. See the module documentation for more information.
+
+Adding a new module is very simple in Puppy. You just has to load the dependcy with Composer:
+```console
+$ composer require <vendor/puppy-module>
+```
+
+That's it, it works!
+
+Removing is also simple:
+```console
+$ composer remove <vendor/puppy-module>
+```
+
+Puppy includes some default modules, like the session, the template, and the static routing. But, you can easily replace them.
 
 ## HTTP response (todo)
 
