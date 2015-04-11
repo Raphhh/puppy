@@ -23,13 +23,13 @@
         "php": ">=5.4",
         "raphhh/puppy-application": "~1.0",
         "raphhh/puppy-config": "~1.0",
-        "raphhh/puppy-static-route": "@dev",
-        "raphhh/puppy-template": "@dev",
-        "raphhh/puppy-session": "@dev"
+        "raphhh/puppy-static-route": "~1.0",
+        "raphhh/puppy-template": "~1.0",
+        "raphhh/puppy-session": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable",
-        "raphhh/puppy-client": "@dev"
+        "raphhh/puppy-client": "~0.1"
     },
     "scripts": {
         "post-install-cmd": "php bin/build",
