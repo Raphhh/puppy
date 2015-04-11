@@ -34,7 +34,7 @@ Puppy uses a simple route system which you can easily extend to add your own beh
 
 ## About
 
-Puppy is a skeleton that runs Puppy/Application. It uses Puppy\Config as config manager.
+Puppy is a skeleton that runs Puppy\Application. It uses Puppy\Config as config manager.
 
 It includes some default modules:
  - [Template module](https://github.com/Raphhh/puppy-template) allows to use Twig as template engine.
@@ -273,7 +273,7 @@ For more information about session and template, see [puppy-service](https://git
 
 A module is an external package that you can add to Puppy like a pluggin. A module can add specific services, controllers, config, and so on. See the module documentation for more information.
 
-Adding a new module is very simple in Puppy. You just has to load the dependcy with Composer:
+Adding a new module is very simple in Puppy. You just has to load the package with Composer:
 ```console
 $ composer require <vendor/puppy-module>
 ```
