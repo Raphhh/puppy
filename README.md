@@ -41,7 +41,17 @@ It includes some default modules:
  - [Static routing module](https://github.com/Raphhh/puppy-static-route) allows to route request uri directly to a template.
  - [Session module](https://github.com/Raphhh/puppy-session) helps to manage the session.
 
-### Files architecture
+
+## Installation
+
+Use [Composer](http://getcomposer.org/) to download Puppy:
+
+```console
+$ composer create-project raphhh/puppy path/to/my/project
+```
+
+
+## Files architecture
 
     ├── bin
     |   ├── build
@@ -81,14 +91,6 @@ It includes some default modules:
 - "tests" contains all your PHP tests. See [PHPUnit](https://phpunit.de/) for more information.
 - "vars" is a tmp folder, containing things like cache, ...
 - "vendor" contains all your PHP dependencies. See [Composer](https://getcomposer.org/) for more information.
-
-## Installation
-
-Use [Composer](http://getcomposer.org/) to download Puppy:
-
-```console
-$ composer create-project raphhh/puppy path/to/my/project
-```
 
 ## Run the demo
 
