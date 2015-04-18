@@ -289,7 +289,7 @@ $ composer remove <vendor/puppy-module>
 
 Puppy includes some default modules, like the session, the template, and the static routing. But, you can easily replace them.
 
-## HTTP response (todo)
+## HTTP response
 
 You can manage the header of your HTTP response with the method 'after'. So, for example, you can define the http cache.
 
@@ -298,12 +298,6 @@ $application->after(function(Response $response){
     ...
 });
 ```
-
-## Error (todo)
-
-Puppy handles automatically your errors and exceptions. It logs them into a file and can send you an email.
-
-For error handling, see the [puppy-application](https://github.com/Raphhh/puppy-application) documentation.
  
 ## Integration and deployment
 
