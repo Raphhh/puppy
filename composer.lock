@@ -54,16 +54,16 @@
         },
         {
             "name": "raphhh/puppy-application",
-            "version": "1.0.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/puppy-application.git",
-                "reference": "1e8ef9b93b49441895cadcf209f8893026c655bb"
+                "reference": "9291543cd28e19a2986abd7fb146898ca5f5f5da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/1e8ef9b93b49441895cadcf209f8893026c655bb",
-                "reference": "1e8ef9b93b49441895cadcf209f8893026c655bb",
+                "url": "https://api.github.com/repos/Raphhh/puppy-application/zipball/9291543cd28e19a2986abd7fb146898ca5f5f5da",
+                "reference": "9291543cd28e19a2986abd7fb146898ca5f5f5da",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "framework",
                 "mvc"
             ],
-            "time": "2015-04-08 20:57:38"
+            "time": "2015-04-18 11:40:33"
         },
         {
             "name": "raphhh/puppy-config",
@@ -335,16 +335,16 @@
         },
         {
             "name": "raphhh/trex-reflection",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Raphhh/trex-reflection.git",
-                "reference": "0446eefe10bab909061de2edb2a9cd1fe7543463"
+                "reference": "006e7c5cc831daa2c9ee2ce46fc10e6d2003a687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Raphhh/trex-reflection/zipball/0446eefe10bab909061de2edb2a9cd1fe7543463",
-                "reference": "0446eefe10bab909061de2edb2a9cd1fe7543463",
+                "url": "https://api.github.com/repos/Raphhh/trex-reflection/zipball/006e7c5cc831daa2c9ee2ce46fc10e6d2003a687",
+                "reference": "006e7c5cc831daa2c9ee2ce46fc10e6d2003a687",
                 "shasum": ""
             },
             "require": {
@@ -377,7 +377,7 @@
             "keywords": [
                 "reflection"
             ],
-            "time": "2015-01-20 21:37:28"
+            "time": "2015-04-14 19:05:01"
         },
         {
             "name": "symfony/http-foundation",
@@ -539,20 +539,20 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9f70492f44398e276d1b81c1b43adfe6751c7b7f",
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.4"
+                "php": ">=5.2.7"
             },
             "type": "library",
             "extra": {
@@ -592,7 +592,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-25 17:32:08"
+            "time": "2015-04-19 08:30:27"
         }
     ],
     "packages-dev": [
